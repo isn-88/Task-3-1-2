@@ -63,6 +63,9 @@
                         <!-- All Users -->
                         <div class="tab-content">
                             <div class="tab-pane active" id="users_table" role="tabpanel" aria-labelledby="users_table-tab">
+
+
+
                                 <!--Вкладка User Table-->
                                 <div class="card">
                                     <div class="card-header">All Users</div>
@@ -96,10 +99,15 @@
                                                             'this.getAttribute(\'user-surname\'), this.getAttribute(\'user-age\'), this.getAttribute(\'user-email\'), ' +
                                                             'this.getAttribute(\'user-password\'))'">Edit</button>
                                                 </td>
+
+
                                                 <td>
                                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" th:data-bs-target="${'#deleter'+one_user.id}">Delete</button>
                                                 </td>
-                                                <!--    -->
+
+
+
+
                                                 <form th:method="POST" th:action="@{/admin/update}" th:object="${editUser}">
                                                     <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserTitle" aria-hidden="true">
                                                         <div class="modal-dialog">
